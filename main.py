@@ -31,7 +31,7 @@ if today_tuple in dict_births:
 
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
-        connection.login(user=my_email, password=)
+        connection.login(user=my_email, password=my_password )
         connection.sendmail(from_addr=my_email, to_addrs=birthday_person["email"],
                             msg=f"Subject:Happy Birthday!\n\n{content}")
         connection.close()
